@@ -10,6 +10,10 @@ const sport_name_Schema = new mongoose.Schema(
             type:String,
             trim:true
         },
+        sport_image:{
+            type:String,
+            trim:true
+        },
         is_active:{
             type:Boolean,
             default:true

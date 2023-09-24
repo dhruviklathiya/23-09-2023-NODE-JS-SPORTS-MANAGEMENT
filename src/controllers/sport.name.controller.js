@@ -4,6 +4,11 @@ const { sport_name_Service } = require("../services");
 const create_sport = async(req,res) => {
     try {
         const reqbody = req.body;
+        if (req.file) {
+            reqbody.product_image = req.file.filename;
+          } else {
+            throw new Error("Sport image is required -!- ");
+        }
         const sport_name_exist = await sport_name_Service.get_sport_by_name(reqbody.sport_name);
         if(sport_name_exist){
             throw new Error("Sport on this name already exist -!- ");

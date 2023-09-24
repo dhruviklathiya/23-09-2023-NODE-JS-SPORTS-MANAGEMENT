@@ -2,10 +2,12 @@ const express = require("express");
 const validate = require("../../middlewares/validate");
 const { sport_Validation } = require("../../validations");
 const { sport_Controller } = require("../../controllers");
+const { upload } = require("../../middlewares/upload");
 const router = express.Router()
 
 router.post(
     "/create-sport_name",
+    upload.single("sport_image"),
     validate(sport_Validation.create_sport),
     sport_Controller.create_sport
 )

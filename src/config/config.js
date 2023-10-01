@@ -1,8 +1,8 @@
 const Joi = require("joi");
 const dotenv = require("dotenv");
-
+// Using dotenv package for impoting environment variable
 dotenv.config({ path: "./.env"});
-
+// envvarsSchema defining validation over env
 const envVarsSchema = Joi.object({
   PORT: Joi.number().default(3000),
   MONGODB_URL: Joi.string().trim().description("Mongodb url"),
@@ -18,7 +18,7 @@ const envVarsSchema = Joi.object({
     "the from field in the emails sent by the app"
   ),
 }).unknown();
-
+// Checking for any error in envVarsSchema if any then print otherwise store in envVars
 const { value: envVars, error } = envVarsSchema
   .prefs({ errors: { label: "key" } })
   .validate(process.env);
@@ -26,7 +26,7 @@ const { value: envVars, error } = envVarsSchema
 if (error) {
   console.log("Config Error: ", error);
 }
-
+// Exporting all environment in single object
 module.exports = {
   port: envVars.PORT,
   mongodb: {

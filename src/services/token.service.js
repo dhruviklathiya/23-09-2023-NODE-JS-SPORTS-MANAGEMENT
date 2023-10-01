@@ -1,10 +1,7 @@
 const jwt = require("jsonwebtoken");
 const { Token } = require("../models");
 const config = require("../config/config");
-
-/**
-* Create token in jsonwebtoken
-*/
+// Creating token
 const generate_token = async (reqbody) => {
   let payload = {
     ...reqbody,
@@ -13,10 +10,7 @@ const generate_token = async (reqbody) => {
 
   return jwt.sign(payload, config.jwt.secret_key);
 };
-
-/**
- * Save token in our database
- */
+// Saving token
 const save_token = async (reqbody) => {
   return Token.findOneAndUpdate(
     { member: reqbody.member },
@@ -28,7 +22,7 @@ const save_token = async (reqbody) => {
     { new: true, upsert: true }
   );
 };
-
+// Exporting service object
 module.exports = {
   generate_token,
   save_token,

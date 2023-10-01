@@ -1,6 +1,6 @@
 const Joi = require("joi");
 
-/** create sport_category */
+// Validation for sport category
 const create_sport_category = {
   body: Joi.object().keys({
     sport_category_name: Joi.string().required().trim(),
@@ -8,7 +8,7 @@ const create_sport_category = {
     sport: Joi.string().required().trim(),
   }),
 };
-
+// Exporting validation
 module.exports = {
     create_sport_category
 }

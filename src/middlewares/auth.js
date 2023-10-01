@@ -1,7 +1,7 @@
 const jwt = require("jsonwebtoken");
 const config = require("../config/config");
 const { Member } = require("../models");
-
+// Authentication for passe token
 const auth = () => async (req, res, next) => {
   try {
     const token = req.headers.authorization;
@@ -20,16 +20,16 @@ const auth = () => async (req, res, next) => {
     if (!decoded) {
       return next(new Error("Please enter valid token!"));
     }
+
     const member = await Member.findOne({ _id: decoded.member });
     if (!member) {
       return next(new Error("Please authenticate!"));
     }
-
     req.member = member;
     next();
   } catch (error) {
     return next(new Error(error));
   }
 };
-
+// Exporting auth function
 module.exports = auth;

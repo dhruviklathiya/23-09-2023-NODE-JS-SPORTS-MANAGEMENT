@@ -1,6 +1,5 @@
 const Joi = require("joi");
-
-/** create sport_player */
+// Validation for sport player
 const create_sport_player = {
   body: Joi.object().keys({
     sport_player_name: Joi.string().required().trim(),
@@ -8,7 +7,7 @@ const create_sport_player = {
     sport: Joi.string().required().trim(),
   }),
 };
-
+// Exporting validation
 module.exports = {
     create_sport_player
 }

@@ -2,7 +2,7 @@ const multer = require("multer");
 const fs = require("fs");
 const path = require("path");
 
-/** Image upload using disk storage */
+// Image upload using disk storage
 const storage__ = multer.diskStorage({
   destination: function (req, file, cb) {
     if (file.fieldname == "sport_image") {

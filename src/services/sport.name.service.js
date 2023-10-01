@@ -24,7 +24,7 @@ const update_sport = async(sport_name_id,reqbody) => {
 const delete_sport = async(sport_name_id) => {
     return Sport_name.findByIdAndDelete(sport_name_id);
 }
-
+// Exporting service object
 module.exports = {
     get_sport_by_name,
     create_sport_name,

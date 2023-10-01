@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-
+// Creating Schema using mongoose
 const member_Schema = new mongoose.Schema(
     {
         member_name:{
@@ -20,7 +20,7 @@ const member_Schema = new mongoose.Schema(
         versionKey:false
     }
 );
-
+// Creating model using mongoose
 const member = mongoose.model("Member",member_Schema);
-
+// Exporting model
 module.exports = member

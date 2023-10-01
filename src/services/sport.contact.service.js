@@ -24,7 +24,7 @@ const update_sport_contact = async(sport_contact_id,reqbody) => {
 const delete_sport_contact = async(sport_contact_id) => {
     return Sport_contact.findByIdAndDelete(sport_contact_id);
 }
-
+// Exporting service object
 module.exports = {
     get_sport_contact_by_path,
     create_sport_contact,

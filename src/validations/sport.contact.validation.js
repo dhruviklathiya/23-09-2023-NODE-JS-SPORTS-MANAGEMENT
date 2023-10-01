@@ -1,6 +1,5 @@
 const Joi = require("joi");
-
-/** create sport_contact */
+  // Validation for sport contact
 const create_sport_contact = {
   body: Joi.object().keys({
     sport_contact_path: Joi.string().required().trim(),
@@ -8,7 +7,7 @@ const create_sport_contact = {
     sport: Joi.string().required().trim(),
   }),
 };
-
+  // Exporting validation
 module.exports = {
     create_sport_contact
 }

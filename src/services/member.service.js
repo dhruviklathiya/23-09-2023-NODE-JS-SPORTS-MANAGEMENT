@@ -24,7 +24,7 @@ const update_member = async(member_id,reqbody) => {
 const delete_member = async(member_id) => {
     return Member.findByIdAndDelete(member_id);
 }
-
+// Exporting service object
 module.exports = {
     get_member_by_name,
     create_member,

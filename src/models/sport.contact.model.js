@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-
+// Creating Schema using mongoose
 const sport_contact_Schema = new mongoose.Schema(
     {
         sport_contact_path:{
@@ -24,6 +24,7 @@ const sport_contact_Schema = new mongoose.Schema(
         versionKey:false
     }
 )
-
+// Creating model using mongoose
 const sport_contact = mongoose.model("Sports_contact",sport_contact_Schema);
+// Exporting model
 module.exports = sport_contact

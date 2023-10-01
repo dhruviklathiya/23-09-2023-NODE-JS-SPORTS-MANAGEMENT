@@ -24,7 +24,7 @@ const update_sport_founder = async(sport_founder_id,reqbody) => {
 const delete_sport_founder = async(sport_founder_id) => {
     return Sport_founder.findByIdAndDelete(sport_founder_id);
 }
-
+// Exporting service object
 module.exports = {
     get_sport_founder_by_name,
     create_sport_founder,

@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-
+// Creating Schema using mongoose
 const token_Schema = mongoose.Schema(
   {
     token: {
@@ -19,7 +19,7 @@ const token_Schema = mongoose.Schema(
     versionKey: false,
   }
 );
-
+// Creating model using mongoose
 const token = mongoose.model("Token", token_Schema);
-
+// Exporting model
 module.exports = token;

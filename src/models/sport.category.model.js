@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-
+// Creating Schema using mongoose
 const sport_category_Schema = new mongoose.Schema(
     {
         sport_category_name:{
@@ -24,6 +24,7 @@ const sport_category_Schema = new mongoose.Schema(
         versionKey:false
     }
 )
-
+// Creating model using mongoose
 const sport_category = mongoose.model("Sports_category",sport_category_Schema);
+// Exporting model
 module.exports = sport_category

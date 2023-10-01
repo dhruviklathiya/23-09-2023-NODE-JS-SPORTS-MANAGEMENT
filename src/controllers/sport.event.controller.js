@@ -1,5 +1,4 @@
 const { sport_event_Service } = require("../services");
-
 // Create sport event
 const create_sport_event = async(req,res) => {
     try {
@@ -24,7 +23,6 @@ const create_sport_event = async(req,res) => {
         })
     }
 }
-
 // Update sport event
 const update_sport_event = async(req,res) => {
     try {
@@ -50,7 +48,6 @@ const update_sport_event = async(req,res) => {
         })
     }
 }
-
 // Delete sport event
 const delete_sport_event = async(req,res) => {
     try {
@@ -74,7 +71,6 @@ const delete_sport_event = async(req,res) => {
         })
     }
 }
-
 // Sport event list
 const get_sport_event_list = async(req,res) => {
     try {
@@ -94,7 +90,7 @@ const get_sport_event_list = async(req,res) => {
         });
       }
 }
-
+// Exporting controller object
 module.exports = {
     create_sport_event,
     get_sport_event_list,

@@ -1,5 +1,4 @@
 const { member_Service } = require("../services");
-
 // Create member
 const create_member = async(req,res) => {
     try {
@@ -24,7 +23,6 @@ const create_member = async(req,res) => {
         })
     }
 }
-
 // Update member
 const update_member = async(req,res) => {
     try {
@@ -50,7 +48,6 @@ const update_member = async(req,res) => {
         })
     }
 }
-
 // Delete member
 const delete_member = async(req,res) => {
     try {
@@ -74,7 +71,6 @@ const delete_member = async(req,res) => {
         })
     }
 }
-
 // Member list
 const get_member_list = async(req,res) => {
     try {
@@ -94,7 +90,7 @@ const get_member_list = async(req,res) => {
         });
       }
 }
-
+// Exporting controller object
 module.exports = {
     create_member,
     get_member_list,

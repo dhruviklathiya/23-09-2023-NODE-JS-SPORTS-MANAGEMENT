@@ -1,5 +1,4 @@
 const { sport_founder_Service } = require("../services");
-
 // Create sport founder
 const create_sport_founder = async(req,res) => {
     try {
@@ -24,7 +23,6 @@ const create_sport_founder = async(req,res) => {
         })
     }
 }
-
 // Update sport founder
 const update_sport_founder = async(req,res) => {
     try {
@@ -50,7 +48,6 @@ const update_sport_founder = async(req,res) => {
         })
     }
 }
-
 // Delete sport founder
 const delete_sport_founder = async(req,res) => {
     try {
@@ -74,7 +71,6 @@ const delete_sport_founder = async(req,res) => {
         })
     }
 }
-
 // Sport founder list
 const get_sport_founder_list = async(req,res) => {
     try {
@@ -94,7 +90,7 @@ const get_sport_founder_list = async(req,res) => {
         });
       }
 }
-
+// Exporting controller object
 module.exports = {
     create_sport_founder,
     get_sport_founder_list,

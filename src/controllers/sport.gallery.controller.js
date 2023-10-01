@@ -1,5 +1,4 @@
 const { sport_gallery_Service } = require("../services");
-
 // Create sport gallery
 const create_sport_gallery = async(req,res) => {
     try {
@@ -24,7 +23,6 @@ const create_sport_gallery = async(req,res) => {
         })
     }
 }
-
 // Update sport gallery
 const update_sport_gallery = async(req,res) => {
     try {
@@ -50,7 +48,6 @@ const update_sport_gallery = async(req,res) => {
         })
     }
 }
-
 // Delete sport gallery
 const delete_sport_gallery = async(req,res) => {
     try {
@@ -74,7 +71,6 @@ const delete_sport_gallery = async(req,res) => {
         })
     }
 }
-
 // Sport gallery list
 const get_sport_gallery_list = async(req,res) => {
     try {
@@ -94,7 +90,7 @@ const get_sport_gallery_list = async(req,res) => {
         });
       }
 }
-
+// Exporting controller object
 module.exports = {
     create_sport_gallery,
     get_sport_gallery_list,

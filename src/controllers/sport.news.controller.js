@@ -1,5 +1,4 @@
 const { sport_news_Service } = require("../services");
-
 // Create sport news
 const create_sport_news = async(req,res) => {
     try {
@@ -24,7 +23,6 @@ const create_sport_news = async(req,res) => {
         })
     }
 }
-
 // Update sport news
 const update_sport_news = async(req,res) => {
     try {
@@ -50,7 +48,6 @@ const update_sport_news = async(req,res) => {
         })
     }
 }
-
 // Delete sport news
 const delete_sport_news = async(req,res) => {
     try {
@@ -74,7 +71,6 @@ const delete_sport_news = async(req,res) => {
         })
     }
 }
-
 // Sport news list
 const get_sport_news_list = async(req,res) => {
     try {
@@ -94,7 +90,7 @@ const get_sport_news_list = async(req,res) => {
         });
       }
 }
-
+// Exporting controller object
 module.exports = {
     create_sport_news,
     get_sport_news_list,

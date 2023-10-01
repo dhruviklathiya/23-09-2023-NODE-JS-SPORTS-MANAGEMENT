@@ -1,5 +1,4 @@
 const { sport_coach_Service } = require("../services");
-
 // Create sport coach
 const create_sport_coach = async(req,res) => {
     try {
@@ -24,7 +23,6 @@ const create_sport_coach = async(req,res) => {
         })
     }
 }
-
 // Update sport coach
 const update_sport_coach = async(req,res) => {
     try {
@@ -50,7 +48,6 @@ const update_sport_coach = async(req,res) => {
         })
     }
 }
-
 // Delete sport coach
 const delete_sport_coach = async(req,res) => {
     try {
@@ -74,7 +71,6 @@ const delete_sport_coach = async(req,res) => {
         })
     }
 }
-
 // Sport coach list
 const get_sport_coach_list = async(req,res) => {
     try {
@@ -94,7 +90,7 @@ const get_sport_coach_list = async(req,res) => {
         });
       }
 }
-
+// Exporting controller object
 module.exports = {
     create_sport_coach,
     get_sport_coach_list,
